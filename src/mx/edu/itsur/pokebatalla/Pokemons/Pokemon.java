@@ -1,4 +1,4 @@
-package mx.edu.itsur.pokebatalla.model;
+package mx.edu.itsur.pokebatalla.Pokemons;
 import java.util.List;
 import java.util.Random;
 
