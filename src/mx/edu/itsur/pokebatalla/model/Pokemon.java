@@ -29,6 +29,8 @@ public class Pokemon {
     double valorAleatorio =  efectividad [valoresAleatoriosIndice];
     
     int variacion [] = {85,86,87,88,89,90,91,92,93,94,95,96,97,98,99,100};
+    Random variacionn = new Random ();
+    int variacionAleatoria = variacionn.nextInt(variacion.length);
 
     //------------------------------------------------------------------------------
     Pokemon() {
