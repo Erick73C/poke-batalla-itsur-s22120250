@@ -6,7 +6,7 @@ import mx.edu.itsur.pokebatalla.Pokemons.Pokemon;
  *
  * @author erick
  */
-public class Habilidades {
+public class Movimiento {
     
     enum TiposDemovimiento
     {

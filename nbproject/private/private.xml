@@ -12,10 +12,16 @@
     </editor-bookmarks>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/erick/Desktop/Proyecto%20poo/poke-batalla-itsur-s22120250/src/mx/edu/itsur/pokebatalla/Moves/Habilidades.java</file>
+            <file>file:/C:/Users/erick/Desktop/Proyecto%20poo/poke-batalla-itsur-s22120250/src/mx/edu/itsur/pokebatalla/Moves/MovimientoEspecial.java</file>
+            <file>file:/C:/Users/erick/Desktop/Proyecto%20poo/poke-batalla-itsur-s22120250/src/mx/edu/itsur/pokebatalla/Moves/MovimientoFisico.java</file>
             <file>file:/C:/Users/erick/Desktop/Proyecto%20poo/poke-batalla-itsur-s22120250/src/mx/edu/itsur/pokebatalla/Pokemons/Main.java</file>
+            <file>file:/C:/Users/erick/Desktop/Proyecto%20poo/poke-batalla-itsur-s22120250/src/mx/edu/itsur/pokebatalla/Moves/Impactrueno.java</file>
+            <file>file:/C:/Users/erick/Desktop/Proyecto%20poo/poke-batalla-itsur-s22120250/src/mx/edu/itsur/pokebatalla/Moves/Movimiento.java</file>
             <file>file:/C:/Users/erick/Desktop/Proyecto%20poo/poke-batalla-itsur-s22120250/src/mx/edu/itsur/pokebatalla/Pokemons/Bullbasaur.java</file>
+            <file>file:/C:/Users/erick/Desktop/Proyecto%20poo/poke-batalla-itsur-s22120250/src/mx/edu/itsur/pokebatalla/Moves/Latigo.java</file>
+            <file>file:/C:/Users/erick/Desktop/Proyecto%20poo/poke-batalla-itsur-s22120250/src/mx/edu/itsur/pokebatalla/Moves/MovimientoEstado.java</file>
             <file>file:/C:/Users/erick/Desktop/Proyecto%20poo/poke-batalla-itsur-s22120250/src/mx/edu/itsur/pokebatalla/Pokemons/Pokemon.java</file>
+            <file>file:/C:/Users/erick/Desktop/Proyecto%20poo/poke-batalla-itsur-s22120250/src/mx/edu/itsur/pokebatalla/Moves/AtaqueRapido.java</file>
         </group>
     </open-files>
 </project-private>
