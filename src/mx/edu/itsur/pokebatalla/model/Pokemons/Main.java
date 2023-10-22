@@ -70,6 +70,8 @@ public class Main {
          
          System.out.println("La pelea termina porque erick ya no tiene pokemons . . . . .");
          
+         System.out.println("LA BATALLA CONTINUARA . . . . . ");
+         
          System.out.println("----------------------------------------------------------------------------");
         
           /**
