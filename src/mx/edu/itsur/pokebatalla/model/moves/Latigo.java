@@ -1,4 +1,4 @@
-package mx.edu.itsur.pokebatalla.Moves;
+package mx.edu.itsur.pokebatalla.model.moves;
 
 /**
  *
@@ -7,7 +7,7 @@ package mx.edu.itsur.pokebatalla.Moves;
 public class Latigo extends MovimientoEstado{
 
     public Latigo() {
-        this.tipo = TiposDemovimiento.NORMAL;
+        this.tipo = TiposDeMovimiento.NORMAL;
         this.potencia = 0;
         this.precision = 100;
         this.puntosPoder = 30;        

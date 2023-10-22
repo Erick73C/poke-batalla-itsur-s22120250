@@ -1,4 +1,4 @@
-package mx.edu.itsur.pokebatalla.Moves;
+package mx.edu.itsur.pokebatalla.model.moves;
 
 /**
  *
