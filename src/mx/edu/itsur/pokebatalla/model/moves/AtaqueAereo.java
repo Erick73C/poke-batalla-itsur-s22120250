@@ -2,7 +2,8 @@ package mx.edu.itsur.pokebatalla.model.moves;
 
 /**
  *Es un movimiento de tipo volador
- * @author erick
+ *  * @author Erick  Omar Perez Gonzalez
+ * s22120250
  */
 public class AtaqueAereo extends MovimientoFisico{
     public AtaqueAereo ()

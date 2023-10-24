@@ -4,7 +4,8 @@ import mx.edu.itsur.pokebatalla.model.moves.Impactrueno;
 
 /**
  *
- * @author erick
+ *  * @author Erick  Omar Perez Gonzalez
+ * s22120250
  */
 public class Main {
 

@@ -5,7 +5,8 @@ import mx.edu.itsur.pokebatalla.model.moves.Surf;
 import mx.edu.itsur.pokebatalla.model.moves.Cascada;
 /**
  *
- * @author erick s22120250
+* @author Erick  Omar Perez Gonzalez
+ * s22120250
  */
 
 public class Psyduck extends Pokemon  {    

@@ -4,7 +4,8 @@ import java.util.Random;
 
 /**
  *
- * @author erick s22120250
+ * @author Erick  Omar Perez Gonzalez
+ * s22120250
  */
 public class Pokemon {
 
@@ -72,12 +73,12 @@ public class Pokemon {
     public String toString() {
            if(hp<0)
            {
-        return this.getClass().getName() + "{tipo:" + tipo + " hp:" + "0" + "}";
+        return this.getClass().getSimpleName()+ "{tipo:" + tipo + " hp:" + "0" + "}";
            }
            else {
                
            
-           return this.getClass().getName() + "{tipo:" + tipo + " hp:" + hp  + "}";
+           return this.getClass().getSimpleName() + "{tipo:" + tipo + " hp:" + hp  + "}";
            }
     }
 

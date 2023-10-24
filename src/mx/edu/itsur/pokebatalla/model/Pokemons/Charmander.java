@@ -3,8 +3,8 @@ package mx.edu.itsur.pokebatalla.model.Pokemons;
 import mx.edu.itsur.pokebatalla.model.moves.Movimiento;
 import mx.edu.itsur.pokebatalla.model.moves.AtaqueRapido;
 /**
- *
- * @author erick
+  * @author Erick  Omar Perez Gonzalez
+ * s22120250
  */
 public class Charmander extends Pokemon {
     

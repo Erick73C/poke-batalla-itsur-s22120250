@@ -7,8 +7,8 @@ import mx.edu.itsur.pokebatalla. model.Pokemons.Pokemon;
  * es una técnica que los Pokémon son capaces de aprender 
  * y que usan en los combates con el fin de debilitar a sus oponentes.
  * https://www.wikidex.net/wiki/Movimiento
- * 
- * @author erick
+ * @author Erick  Omar Perez Gonzalez
+ * s22120250
  */
 public class Movimiento {
 

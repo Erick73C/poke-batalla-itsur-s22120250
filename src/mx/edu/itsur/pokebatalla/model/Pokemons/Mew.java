@@ -9,8 +9,8 @@ import mx.edu.itsur.pokebatalla.model.moves.Teletransporte;
 
 
 /**
- *
- * @author erick s22120250
+ * @author Erick  Omar Perez Gonzalez
+ * s22120250
  */
 public class Mew  extends Pokemon {
     

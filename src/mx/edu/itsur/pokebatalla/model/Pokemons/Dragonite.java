@@ -6,8 +6,8 @@ import mx.edu.itsur.pokebatalla.model.moves.AtaqueAereo;
 import mx.edu.itsur.pokebatalla.model.moves.Hiperrayo;
 import mx.edu.itsur.pokebatalla.model.moves.Movimiento;
 /**
- *
- * @author erick
+ * @author Erick  Omar Perez Gonzalez
+ * s22120250
  */
 
 public class Dragonite extends  Pokemon{

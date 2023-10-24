@@ -7,7 +7,8 @@ import mx.edu.itsur.pokebatalla.model.moves.AtaqueRapido;
 import mx.edu.itsur.pokebatalla.model.moves.Movimiento;
 /**
  *
- * @author erick
+  * @author Erick  Omar Perez Gonzalez
+ * s22120250
  */
 public class Pikachu  extends Pokemon{
 
