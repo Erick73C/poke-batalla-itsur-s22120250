@@ -7,7 +7,7 @@ import mx.edu.itsur.pokebatalla.model.moves.Movimiento;
  * @author Erick  Omar Perez Gonzalez
  * s22120250
  */
-public class Bullbasaur extends Pokemon {
+public abstract class Bullbasaur extends Pokemon {
 
     public Bullbasaur() {
         tipo = "PLANTA/VENENO";

@@ -1,13 +1,14 @@
 package mx.edu.itsur.pokebatalla.model.Pokemons;
 import java.util.List;
 import java.util.Random;
+import mx.edu.itsur.pokebatalla.model.moves.Movimiento;
 
 /**
  *
  * @author Erick  Omar Perez Gonzalez
  * s22120250
  */
-public class Pokemon {
+public abstract  class Pokemon {
 
     //Atributos
     protected String tipo;
@@ -68,6 +69,7 @@ public class Pokemon {
         this.hp = this.hp;
     }
     **/
+    protected abstract void atacar(Pokemon oponente, Movimiento move );
     
     @Override
     public String toString() {

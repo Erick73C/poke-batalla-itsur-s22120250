@@ -10,7 +10,7 @@ import mx.edu.itsur.pokebatalla.model.moves.Movimiento;
  * s22120250
  */
 
-public class Dragonite extends  Pokemon{
+public abstract  class Dragonite extends  Pokemon{
     
             public enum Movimientos {
                 Anulacion, Hiperrayo,AtaqueAereo

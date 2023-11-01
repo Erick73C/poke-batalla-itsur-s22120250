@@ -9,7 +9,7 @@ import mx.edu.itsur.pokebatalla.model.moves.Cascada;
  * s22120250
  */
 
-public class Psyduck extends Pokemon  {    
+public abstract class Psyduck extends Pokemon  {    
     
     
     public enum Movimientos {

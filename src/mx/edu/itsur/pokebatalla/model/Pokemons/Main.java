@@ -10,8 +10,15 @@ import mx.edu.itsur.pokebatalla.model.moves.Impactrueno;
 public class Main {
 
     public static void main(String[] args) {
+        //Unidad 4 
         
-        Psyduck patoamarillo = new  Psyduck ("Pato estresado");
+        
+       //Jigglypuff  a = new Jigglypuff();
+        
+        
+        
+        /** UNIDAD 3 
+        Psyduck patoamarillo = new  Psyduck ("Pato estresado") {};
         Mew mew  = new Mew ("Mew");
         Dragonite gragon = new  Dragonite ("Dragonite");     
         Pikachu pika = new Pikachu();
@@ -74,6 +81,8 @@ public class Main {
          System.out.println("LA BATALLA CONTINUARA . . . . . ");
          
          System.out.println("----------------------------------------------------------------------------");
+         * 
+         * */
         
           /**
            * EJEMPLO DE PROYECTO

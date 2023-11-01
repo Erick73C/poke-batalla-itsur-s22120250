@@ -12,7 +12,7 @@ import mx.edu.itsur.pokebatalla.model.moves.Teletransporte;
  * @author Erick  Omar Perez Gonzalez
  * s22120250
  */
-public class Mew  extends Pokemon {
+public abstract class Mew  extends Pokemon {
     
     public  enum Movimientos{
         Destructor,

@@ -6,7 +6,7 @@ import mx.edu.itsur.pokebatalla.model.moves.AtaqueRapido;
   * @author Erick  Omar Perez Gonzalez
  * s22120250
  */
-public class Charmander extends Pokemon {
+public abstract class Charmander extends Pokemon {
     
     public enum Movimientos {
         ATAQUE_RAPIDO,
