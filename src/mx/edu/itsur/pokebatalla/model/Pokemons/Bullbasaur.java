@@ -16,6 +16,7 @@ public abstract class Bullbasaur extends Pokemon {
         defensa = 49;
         nivel = 1;
         precision = 4;
+        xp = 64;
     }
     
     public Bullbasaur(String nombre) {

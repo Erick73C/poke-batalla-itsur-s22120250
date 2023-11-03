@@ -18,6 +18,8 @@ public abstract  class Pokemon {
     protected int ataque;
     protected int defensa;
     protected double precision;
+    protected int xp;
+            
    
     /**
      * Formula de ataque de pokemon incluyendo  variables aleatorias 
