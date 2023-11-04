@@ -27,6 +27,7 @@ public abstract class Psyduck extends Pokemon  {
         this.hp = 50; 
         this.precision = 5; 
         this.nivel =  1;
+        this.xp = 64;
      }
     
     public Psyduck  (String nombre)

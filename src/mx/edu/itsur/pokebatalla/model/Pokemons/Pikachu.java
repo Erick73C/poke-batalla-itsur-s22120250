@@ -20,12 +20,13 @@ public abstract class Pikachu  extends Pokemon{
 
     //Constructor default
     public Pikachu() {
-        this.tipo = "ELECTRICO";
-        this.hp = 35;
-        this.ataque = 55;
-        this.defensa = 30;
-        this.nivel = 1;
-        this.precision = 4;
+        tipo = "ELECTRICO";
+        hp = 35;
+        ataque = 55;
+        defensa = 30;
+        nivel = 1;
+        precision = 4;
+        xp = 64; //Poner la xp correspondiente a cada pokemon
     }
 
     public Pikachu(String nombre) {

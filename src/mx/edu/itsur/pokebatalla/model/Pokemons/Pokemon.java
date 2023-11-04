@@ -43,8 +43,6 @@ public abstract  class Pokemon {
     Pokemon() {
         
     }
-
- 
      public int getNivel() {
         return nivel;
     }

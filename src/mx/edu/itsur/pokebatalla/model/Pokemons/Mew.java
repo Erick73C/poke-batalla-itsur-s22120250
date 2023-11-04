@@ -28,6 +28,7 @@ public abstract class Mew  extends Pokemon {
         this.hp = 100; 
         this.nivel = 50; 
         this.precision = 5; 
+        this.xp = 64;
     }
     
     public Mew (String nombre)

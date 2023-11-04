@@ -19,6 +19,7 @@ public abstract class Charmander extends Pokemon {
         defensa = 43;
         nivel = 1;
         precision = 4;
+        xp = 64;
     }
 
     //Constructor alterno 1

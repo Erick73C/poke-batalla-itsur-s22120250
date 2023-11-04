@@ -25,6 +25,7 @@ public abstract  class Dragonite extends  Pokemon{
                 this.defensa = 95;
                 this.precision = 3;
                 this.nivel = 1; 
+                xp = 64;
             }
             
             public Dragonite (String nombre)
