@@ -1,6 +1,5 @@
 
 package mx.edu.itsur.pokebatalla.model.Pokemons;
-import mx.edu.itsur.pokebatalla.model.moves.Impactrueno;
 
 /**
  *
@@ -12,8 +11,9 @@ public class Main {
     public static void main(String[] args) {
         //Unidad 4 
         
+        Pikachu a = new Pikachu("pepe");
         
-       //Jigglypuff  a = new Jigglypuff();
+        a.atacar(a, 4);
         
         //Agregar los pokemons 
         

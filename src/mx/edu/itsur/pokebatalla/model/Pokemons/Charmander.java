@@ -1,18 +1,18 @@
-
 package mx.edu.itsur.pokebatalla.model.Pokemons;
+
 import mx.edu.itsur.pokebatalla.model.moves.Movimiento;
 import mx.edu.itsur.pokebatalla.model.moves.AtaqueRapido;
+
 /**
-  * @author Erick  Omar Perez Gonzalez
- * s22120250
+ * @author Erick Omar Perez Gonzalez s22120250
  */
-public abstract class Charmander extends Pokemon {
-    
+public class Charmander extends Pokemon {
+
     public enum Movimientos {
         ATAQUE_RAPIDO,
     }
-    
- public Charmander() {
+
+    public Charmander() {
         tipo = "FUEGO";
         hp = 39;
         ataque = 52;
@@ -28,7 +28,21 @@ public abstract class Charmander extends Pokemon {
         this.nombre = nombre;
     }
 
-    public void atacar(Pokemon oponente, Charmander.Movimientos movimientoAUtilizar) {
+    //METODOS 
+    @Override
+    public Enum[] getMovimientos() {
+        return Charmander.Movimientos.values();
+    }
+
+    @Override
+    public void atacar(Pokemon oponente, int ordinalMovimiento) {
+
+        if (this.hp <= 0) {
+            System.out.println("Charmander. esta agotado y no puede realizar mas movimientos.");
+            return;
+        }
+
+        Charmander.Movimientos movimientoAUtilizar = Charmander.Movimientos.values()[ordinalMovimiento];
 
         //Instanciar el movimiento solicitado
         Movimiento instanciaMovimiento;
@@ -39,9 +53,9 @@ public abstract class Charmander extends Pokemon {
             default:
                 throw new AssertionError();
         }
-        
+
         instanciaMovimiento.utilizar(this, oponente);
 
     }
-    
+
 }

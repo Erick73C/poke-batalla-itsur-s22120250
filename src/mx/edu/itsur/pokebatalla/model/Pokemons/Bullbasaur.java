@@ -1,13 +1,13 @@
 package mx.edu.itsur.pokebatalla.model.Pokemons;
+
 import mx.edu.itsur.pokebatalla.model.moves.AtaqueRapido;
 import mx.edu.itsur.pokebatalla.model.moves.Latigo;
 import mx.edu.itsur.pokebatalla.model.moves.Movimiento;
 
 /**
- * @author Erick  Omar Perez Gonzalez
- * s22120250
+ * @author Erick Omar Perez Gonzalez s22120250
  */
-public abstract class Bullbasaur extends Pokemon {
+public class Bullbasaur extends Pokemon {
 
     public Bullbasaur() {
         tipo = "PLANTA/VENENO";
@@ -18,20 +18,33 @@ public abstract class Bullbasaur extends Pokemon {
         precision = 4;
         xp = 64;
     }
-    
+
     public Bullbasaur(String nombre) {
-        this(); 
+        this();
         this.nombre = nombre;
     }
-    
+
     public enum Movimientos {
         ATAQUE_RAPIDO,
         LATIGO
     }
-    public void atacar(Pokemon oponente, Bullbasaur.Movimientos movimientoAUtilizar) {
 
-        //Instanciar el movimiento solicitado
+    @Override
+    public Enum[] getMovimientos() {
+        return Bullbasaur.Movimientos.values();
+    }
+
+    @Override
+    public void atacar(Pokemon oponente, int ordinalMovimiento) {
+
         Movimiento instanciaMovimiento;
+
+        if (this.hp <= 0) {
+            System.out.println("Bullbasaur. esta agotado y no puede realizar mas movimientos.");
+            return;
+        }
+        Bullbasaur.Movimientos movimientoAUtilizar = Bullbasaur.Movimientos.values()[ordinalMovimiento];
+
         switch (movimientoAUtilizar) {
             case ATAQUE_RAPIDO:
                 instanciaMovimiento = new AtaqueRapido();
@@ -43,8 +56,7 @@ public abstract class Bullbasaur extends Pokemon {
                 throw new AssertionError();
         }
 
-        //Aplicar el movimiento
         instanciaMovimiento.utilizar(this, oponente);
 
-    }  
+    }
 }
