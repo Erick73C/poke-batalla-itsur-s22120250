@@ -13,14 +13,16 @@ public class Entrenador {
     public Entrenador(String nombre) {
         this.nombre = nombre;
         this.pokemonsCapturados = new ArrayList<>();
+        this.pokemonsCapturados = new ArrayList<>();
     }
 
     public boolean capturarPokemon(Pokemon p) {
         return pokemonsCapturados.add(p);
     }
 
-    //VERIFICAR CON EL MAESTRO
+
     public void instruirMovimientoAlPokemonActual(Pokemon oponente, int ordinalMovimiento) {
+        
         if (pokemonActual == null) {
             System.out.println("No hay un Pokémon actualmente seleccionado.");
             return;
@@ -31,13 +33,14 @@ public class Entrenador {
             return;
         }
         // Llamar al metodo atacar del Pokemon actual
-        pokemonActual.atacar(oponente, ordinalMovimiento);
+        this.pokemonActual.atacar(oponente, ordinalMovimiento);
     }
+    
 
-    public boolean estaDerrotado(int hp) {
+    public boolean estaDerrotado() {
         for (Pokemon pokemon : pokemonsCapturados) {
 
-            if (pokemon.gethp(hp) > 0) {
+            if (pokemon.gethp() > 0) {
                 return false;
             }
         }
@@ -54,7 +57,7 @@ public class Entrenador {
     }
 
     public void setPokemonActual(Pokemon p) {
-        pokemonActual = p;
+       this. pokemonActual = p;
     }
 
     public List<Pokemon> getPokemonsCapturados() {
