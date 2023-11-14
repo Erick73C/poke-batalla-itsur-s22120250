@@ -12,6 +12,7 @@ public class Main {
     public static void main(String[] args) {
         //Unidad 4 
 
+        Pikachu n = new Pikachu("PITP");
         Pikachu a = new Pikachu("pepe");
         Dragonite b = new Dragonite("luis");
         Psyduck c = new Psyduck("Pato estresado");

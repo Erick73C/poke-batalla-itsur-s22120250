@@ -16,8 +16,6 @@ public class Batalla {
     protected int turno = 1;
     protected boolean batallaFinalizada = false;
 
-    private boolean primerAtaqueRealizado = false;
-
     public Batalla(Entrenador entrenador1, Entrenador entrenador2) {
         this.entrenador1 = entrenador1;
         this.entrenador2 = entrenador2;
@@ -39,24 +37,21 @@ public class Batalla {
 
             System.out.println("Turno del entrenador: " + entrenadorEnTurno.getNombre());
 
-            // Asegurarse de que el Pokemon actual esté seleccionado
-            if (entrenadorEnTurno.getPokemonActual() == null || entrenadorEnTurno.getPokemonActual().gethp() <= 0) {
-                cambiarPokemon(entrenadorEnTurno);
-            }
-            // Asegurarse de que el oponente tenga un Pokemon actual
+            // Asegurarse de que el oponente tenga un Pokemon actual evitar errores
             if (oponente.getPokemonActual() == null) {
                 System.out.println("No hay un Pokémon actualmente seleccionado para el oponente");
                 return;
             }
-
-            // Entrenador en turno elige ataque
-            //  se comento porque es muy molesto ponerlo en cada turno  ya nomas se deo cuando el pokemon es derrotado        cambiarPokemon(entrenadorEnTurno);
             seleccionarAtaque(entrenadorEnTurno, oponente.getPokemonActual());
+            if (entrenadorEnTurno.getPokemonActual() == null || entrenadorEnTurno.getPokemonActual().gethp() <= 0) {
+                cambiarPokemon(entrenadorEnTurno);
+            }
 
             Pokemon pokemonEnTurno = entrenadorEnTurno.getPokemonActual();
 
             if (oponente.estaDerrotado()) {
                 System.out.println("¡El entrenador " + oponente.getNombre() + " ha sido derrotado!");
+                System.out.println(" <-------------------*****LA BATALLA A FINALIZADO  *****------------------->");
                 batallaFinalizada = true;
             } else {
                 // Cambiar el turno
@@ -69,9 +64,9 @@ public class Batalla {
         int idx = 1;
         System.out.println("████████████████████████████████████████████");
         for (Pokemon pokemon : entrenadorEnturno.getPokemonsCapturados()) {
-            System.out.println(idx + ".- " + pokemon.getClass().getSimpleName());
+            System.out.println(idx + ".- " + pokemon.getClass().getSimpleName() + " HP: " + pokemon.gethp());
             idx++;
-             System.out.println("████████████████████████████████████████████");
+            System.out.println("████████████████████████████████████████████");
         }
         System.out.println("");
         System.out.println("Elige un  pokemon " + entrenadorEnturno.getNombre());
@@ -96,7 +91,10 @@ public class Batalla {
         Pokemon pokemonActual = entrenadorEnturno.getPokemonActual();
 
         System.out.println("-----------------------------------------------------");
-        System.out.println("Seleccione un ataque para " + pokemonActual.getClass().getSimpleName() + ":");
+        System.out.println("Seleccione un ataque para " + pokemonActual.getClass().getSimpleName() + " Con una vida actual de " + pokemonActual.gethp());
+        System.out.println("Defensa de: " + pokemonActual.getDefensa());
+        System.out.println("Y un nivel de: " + pokemonActual.getNivel());
+        System.out.println("");
 
         int idx = 1;
 
@@ -162,6 +160,7 @@ public class Batalla {
             entrenador.setPokemonActual(nuevoPokemon);
 
             System.out.println("Has cambiado a " + nuevoPokemon.getClass().getSimpleName() + " en tu equipo.");
+            
         }
     }
 }
