@@ -13,29 +13,31 @@ public class Entrenador {
     public Entrenador(String nombre) {
         this.nombre = nombre;
         this.pokemonsCapturados = new ArrayList<>();
-        this.pokemonsCapturados = new ArrayList<>();
     }
 
     public boolean capturarPokemon(Pokemon p) {
         return pokemonsCapturados.add(p);
     }
 
-
     public void instruirMovimientoAlPokemonActual(Pokemon oponente, int ordinalMovimiento) {
-        
-        if (pokemonActual == null) {
-            System.out.println("No hay un Pokémon actualmente seleccionado.");
-            return;
-        }
 
-        if (ordinalMovimiento < 0 || ordinalMovimiento >= pokemonActual.getMovimientos().length) {
-            System.out.println("El ordinal de movimiento no es válido.");
-            return;
+        try {
+            if (pokemonActual == null) {
+                throw new NullPointerException("No hay un Pokémon actualmente seleccionado.");
+            }
+
+            if (ordinalMovimiento < 0 || ordinalMovimiento >= pokemonActual.getMovimientos().length) {
+                throw new IllegalArgumentException("El ordinal de movimiento no es válido.");
+            }
+
+            // Llamar al metodo atacar del Pokemon actual
+            this.pokemonActual.atacar(oponente, ordinalMovimiento);
+        }// proporciona informacion detallada sobre el lugar en el código donde ocurrio la excepcion SOLO DETECTA UN POSIBLE ERROR Y DA INFORMACION DE EL 
+        catch (NullPointerException | IllegalArgumentException e) {
+            System.out.println("Error: " + e.getMessage());
+            e.printStackTrace();
         }
-        // Llamar al metodo atacar del Pokemon actual
-        this.pokemonActual.atacar(oponente, ordinalMovimiento);
     }
-    
 
     public boolean estaDerrotado() {
         for (Pokemon pokemon : pokemonsCapturados) {
@@ -57,7 +59,7 @@ public class Entrenador {
     }
 
     public void setPokemonActual(Pokemon p) {
-       this. pokemonActual = p;
+        this.pokemonActual = p;
     }
 
     public List<Pokemon> getPokemonsCapturados() {

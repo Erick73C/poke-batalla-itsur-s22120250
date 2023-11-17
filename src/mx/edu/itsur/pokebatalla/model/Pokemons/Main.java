@@ -2,12 +2,11 @@ package mx.edu.itsur.pokebatalla.model.Pokemons;
 
 import mx.edu.itsur.pokebatalla.model.Battles.Batalla;
 import mx.edu.itsur.pokebatalla.model.Battles.Entrenador;
-
 /**
  *
  *  * @author Erick Omar Perez Gonzalez s22120250
  */
-public class Main {
+public class Main /*extends JFrame implements Runnable */{
 
     public static void main(String[] args) {
         //Unidad 4 
@@ -29,7 +28,7 @@ public class Main {
 
         Batalla x = new Batalla(en1, en2);
         x.desarrollarBatalla();
-
+        
         //Agregar los pokemons 
         /**
          * UNIDAD 3 Psyduck patoamarillo = new Psyduck ("Pato estresado") {};

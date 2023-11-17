@@ -44,6 +44,10 @@ import mx.edu.itsur.pokebatalla.model.moves.Movimiento;
 
             Movimiento instanciaMovimiento;
             Pikachu.Movimientos movimientoAUtilizar = Pikachu.Movimientos.values()[ordinalMovimiento];
+               if (this.hp <= 0) {
+                System.out.println("Pikachu esta agotado y no puede realizar mas movimientos.");
+                return;
+            }
             
             switch (movimientoAUtilizar) {
                 case IMPACTRUENO:
@@ -58,10 +62,7 @@ import mx.edu.itsur.pokebatalla.model.moves.Movimiento;
                 default:
                     throw new AssertionError();
             }
-            if (this.hp <= 0) {
-                System.out.println("Pikachu esta agotado y no puede realizar mas movimientos.");
-                return;
-            }
+         
 
             instanciaMovimiento.utilizar(this, oponente);
         }
