@@ -9,7 +9,7 @@ import mx.edu.itsur.pokebatalla.model.Battles.Entrenador;
 public class Main /*extends JFrame implements Runnable */{
 
     public static void main(String[] args) {
-        //Unidad 4 
+        //Unidad 4  Y  5
 
         Pikachu n = new Pikachu("PITP");
         Pikachu a = new Pikachu("pepe");
