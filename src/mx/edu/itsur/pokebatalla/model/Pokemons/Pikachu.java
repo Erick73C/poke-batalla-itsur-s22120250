@@ -1,5 +1,6 @@
 package mx.edu.itsur.pokebatalla.model.Pokemons;
 
+import java.io.Serializable;
 import mx.edu.itsur.pokebatalla.model.moves.Impactrueno;
 import mx.edu.itsur.pokebatalla.model.moves.Latigo;
 import mx.edu.itsur.pokebatalla.model.moves.AtaqueRapido;
@@ -9,7 +10,7 @@ import mx.edu.itsur.pokebatalla.model.moves.Movimiento;
  *
  * @author Erick Omar Perez Gonzalez s22120250
  */
-    public class Pikachu extends Pokemon {
+    public class Pikachu extends Pokemon implements  Serializable{
 
         public enum Movimientos {
             IMPACTRUENO,

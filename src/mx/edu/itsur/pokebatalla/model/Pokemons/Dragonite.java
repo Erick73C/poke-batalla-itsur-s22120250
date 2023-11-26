@@ -1,5 +1,6 @@
 package mx.edu.itsur.pokebatalla.model.Pokemons;
 
+import java.io.Serializable;
 import mx.edu.itsur.pokebatalla.model.moves.Anulacion;
 import mx.edu.itsur.pokebatalla.model.moves.AtaqueAereo;
 import mx.edu.itsur.pokebatalla.model.moves.Hiperrayo;
@@ -9,7 +10,7 @@ import mx.edu.itsur.pokebatalla.model.moves.Movimiento;
  * @author Erick Omar Perez Gonzalez s22120250
  */
 
-public class Dragonite extends Pokemon {
+public class Dragonite extends Pokemon implements  Serializable{
 
     public enum Movimientos {
         Anulacion, Hiperrayo, AtaqueAereo
@@ -47,12 +48,15 @@ public class Dragonite extends Pokemon {
 
         Movimiento instanciaMovimiento;
         switch (movimientoAUtilizar) {
+            
             case Anulacion:
                 instanciaMovimiento = new Anulacion();
                 break;
             case Hiperrayo:
+                
                 instanciaMovimiento = new Hiperrayo();
             case AtaqueAereo:
+                
                 instanciaMovimiento = new AtaqueAereo();
                 break;
             default:

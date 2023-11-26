@@ -1,10 +1,11 @@
 package mx.edu.itsur.pokebatalla.model.Battles;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 import mx.edu.itsur.pokebatalla.model.Pokemons.Pokemon;
 
-public class Entrenador {
+public class Entrenador implements Serializable{
 
     protected String nombre;
     protected List<Pokemon> pokemonsCapturados;

@@ -3,13 +3,15 @@ package mx.edu.itsur.pokebatalla.model.Battles;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.io.Serializable;
+import mx.edu.itsur.pokebatalla.model.ControlArchivos.FileManager;
 import mx.edu.itsur.pokebatalla.model.Pokemons.Pokemon;
 
 /**
  *
  * @author Erick Omar Perez Gonzalez s22120250
  */
-public class Batalla {
+public class Batalla implements Serializable {
 
     protected Entrenador entrenador1;
     protected Entrenador entrenador2;
@@ -19,6 +21,14 @@ public class Batalla {
     public Batalla(Entrenador entrenador1, Entrenador entrenador2) {
         this.entrenador1 = entrenador1;
         this.entrenador2 = entrenador2;
+    }
+
+    public boolean hayGanador() {
+        return (entrenador1.estaDerrotado() || entrenador2.estaDerrotado());
+    }
+
+    public void guardarProgreso() {
+        FileManager.guardarPartida(this);
     }
 
     public void desarrollarBatalla() {
@@ -50,6 +60,7 @@ public class Batalla {
         } while (entrenador2.getPokemonActual() == null);
 
         while (!batallaFinalizada) {
+
             Entrenador entrenadorEnTurno = (turno == 1) ? entrenador1 : entrenador2;
             Entrenador oponente = (turno == 1) ? entrenador2 : entrenador1;
 
@@ -62,6 +73,7 @@ public class Batalla {
             }
 
             seleccionarAtaque(entrenadorEnTurno, oponente.getPokemonActual());
+
             if (entrenadorEnTurno.getPokemonActual() == null || entrenadorEnTurno.getPokemonActual().gethp() <= 0) {
                 cambiarPokemon(entrenadorEnTurno);
 
@@ -75,9 +87,9 @@ public class Batalla {
             if (oponente.estaDerrotado()) {
                 System.out.println("¡El entrenador " + oponente.getNombre() + " ha sido derrotado!");
                 System.out.println(" <-------------------*****LA BATALLA A FINALIZADO  *****------------------->");
-                batallaFinalizada = true;
+                batallaFinalizada = true; 
             } else {
-                // Cambiar el turno
+                guardarProgreso();
                 turno = (turno == 1) ? 2 : 1;
             }
         }
@@ -87,7 +99,7 @@ public class Batalla {
         int idx = 1;
         System.out.println("████████████████████████████████████████████");
         for (Pokemon pokemon : entrenadorEnturno.getPokemonsCapturados()) {
-            System.out.println(idx + ".- " + pokemon.getClass().getSimpleName() + " HP: " + pokemon.gethp() + "  DEFENSA: " + pokemon.getDefensa() + "  NIVEL: " + pokemon.getNivel()  );
+            System.out.println(idx + ".- " + pokemon.getClass().getSimpleName() + " HP: " + pokemon.gethp() + "  DEFENSA: " + pokemon.getDefensa() + "  NIVEL: " + pokemon.getNivel());
             idx++;
             System.out.println("████████████████████████████████████████████");
         }
@@ -131,6 +143,7 @@ public class Batalla {
         while (true) {
             try {
                 BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+
                 String input = br.readLine();
 
                 // Intentar convertir la entrada a un entero

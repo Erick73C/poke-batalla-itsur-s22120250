@@ -1,5 +1,6 @@
 package mx.edu.itsur.pokebatalla.model.Pokemons;
 
+import java.io.Serializable;
 import mx.edu.itsur.pokebatalla.model.moves.Refugio;
 import mx.edu.itsur.pokebatalla.model.moves.Surf;
 import mx.edu.itsur.pokebatalla.model.moves.Cascada;
@@ -8,7 +9,7 @@ import mx.edu.itsur.pokebatalla.model.moves.Cascada;
  *
  * @author Erick Omar Perez Gonzalez s22120250
  */
-public class Psyduck extends Pokemon {
+public class Psyduck extends Pokemon implements Serializable{
 
     public enum Movimientos {
         Refugio,

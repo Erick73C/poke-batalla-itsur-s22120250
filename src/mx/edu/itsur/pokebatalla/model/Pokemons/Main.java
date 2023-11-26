@@ -1,131 +1,72 @@
 package mx.edu.itsur.pokebatalla.model.Pokemons;
 
+import java.io.IOException;
+import java.io.Serializable;
 import mx.edu.itsur.pokebatalla.model.Battles.Batalla;
 import mx.edu.itsur.pokebatalla.model.Battles.Entrenador;
+import mx.edu.itsur.pokebatalla.model.ControlArchivos.FileManager;
+
 /**
  *
  *  * @author Erick Omar Perez Gonzalez s22120250
  */
-public class Main /*extends JFrame implements Runnable */{
+public class Main /*extends JFrame implements Runnable */ implements Serializable {
 
     public static void main(String[] args) {
-        //Unidad 4  Y  5
 
-        Pikachu n = new Pikachu("PITP");
-        Pikachu a = new Pikachu("pepe");
-        Dragonite b = new Dragonite("luis");
-        Psyduck c = new Psyduck("Pato estresado");
-        Mew d = new Mew("Mew");
-        Charmander e = new Charmander("Dragon rojo");
+        Batalla x = FileManager.leerPartida();
 
-        Entrenador en1 = new Entrenador("Sergio");
-        en1.capturarPokemon(a);
-        en1.capturarPokemon(e);
+        if (x == null) {
+            Pikachu a = new Pikachu("pepe");
+            Dragonite b = new Dragonite("luis");
+            Psyduck c = new Psyduck("Pato estresado");
+            Charmander e = new Charmander("Dragon rojo");
 
-        Entrenador en2 = new Entrenador("Evelyn");
-        en2.capturarPokemon(b);
-        en2.capturarPokemon(c);
+            Entrenador en1 = new Entrenador("Sergio");
+            en1.capturarPokemon(a);
+            en1.capturarPokemon(e);
 
-        Batalla x = new Batalla(en1, en2);
+            Entrenador en2 = new Entrenador("Evelyn");
+            en2.capturarPokemon(b);
+            en2.capturarPokemon(c);
+
+            x = new Batalla(en1, en2);
+        }
         x.desarrollarBatalla();
-        
-        //Agregar los pokemons 
-        /**
-         * UNIDAD 3 Psyduck patoamarillo = new Psyduck ("Pato estresado") {};
-         * Mew mew = new Mew ("Mew"); Dragonite gragon = new Dragonite
-         * ("Dragonite"); Pikachu pika = new Pikachu(); Charmander charm = new
-         * Charmander("Charmander"); Bullbasaur bullb = new Bullbasaur();
-         *
-         * System.out.println("----------------------------------------------------------------");
-         *
-         * System.out.println("Erick va caminando por la ruta 56 " + " pasa por
-         * los arbustos . . . . . ."); System.out.println("ho no se encontro con
-         * dos pokemon"); System.out.println(". . . . . .");
-         * System.out.println(". . . . . ."); System.out.println("Enpieza una
-         * batalla, erick utiliza a " + patoamarillo.nombre + " y " + mew.nombre
-         * ); System.out.println(""); System.out.println("");
-         *
-         * System.out.println(mew.nombre + "enpieza a tacar primero ");
-         * mew.atacar(charm, Mew.Movimientos.Destructor);
-         * System.out.println(""); System.out.println(charm.nombre + " se enoja
-         * y ataca" ); charm.atacar(mew, Charmander.Movimientos.ATAQUE_RAPIDO);
-         * System.out.println(""); System.out.println(gragon.nombre + " al ver
-         * esto se enoja y ataca a " + patoamarillo.nombre);
-         * gragon.atacar(patoamarillo, Dragonite.Movimientos.Anulacion);
-         * System.out.println(""); System.out.println(patoamarillo.nombre+" se
-         * estresa y responde"); patoamarillo.atacar(gragon,
-         * Psyduck.Movimientos.Cascada); System.out.println("");
-         *
-         * System.out.println(mew.nombre + " ve a " + charm.nombre + " muy debil
-         * asi que lo ataca" ); mew.atacar(charm,
-         * Mew.Movimientos.Teletransporte);
-         *
-         * System.out.println(""); System.out.println(mew.nombre + " Ataca sin
-         * piedad a " + gragon.nombre); mew.atacar(gragon,
-         * Mew.Movimientos.Psicorrayo);
-         *
-         *
-         * System.out.println(gragon.nombre + "Se enfada . . . . . . ");
-         * gragon.atacar(patoamarillo, Dragonite.Movimientos.Anulacion);
-         *
-         * System.out.println(""); System.out.println(mew.nombre + "ni se inmuta
-         * y se va" + "la pelea queda etre " + patoamarillo.nombre + " y " +
-         * gragon.nombre ); System.out.println(patoamarillo.nombre + " al ver
-         * esto ataca "); patoamarillo.atacar(gragon, Psyduck.Movimientos.Surf);
-         *
-         * System.out.println(gragon.nombre + " se molesta . . . . ");
-         * gragon.atacar(patoamarillo, Dragonite.Movimientos.Hiperrayo);
-         *
-         * System.out.println(gragon.nombre + " Utiliza toda su fuerza y taca
-         * con todo "); gragon.atacar(patoamarillo,
-         * Dragonite.Movimientos.Anulacion); gragon.atacar(patoamarillo,
-         * Dragonite.Movimientos.AtaqueAereo); gragon.atacar(patoamarillo,
-         * Dragonite.Movimientos.Hiperrayo); System.out.println("");
-         *
-         *
-         * System.out.println(patoamarillo.nombre + " casi no recibe danio y
-         * huelle");
-         *
-         * System.out.println("La pelea termina porque erick ya no tiene
-         * pokemons . . . . .");
-         *
-         * System.out.println("LA BATALLA CONTINUARA . . . . . ");
-         *
-         * System.out.println("----------------------------------------------------------------------------");
-         *
-         *
-         */
-        /**
-         * EJEMPLO DE PROYECTO System.out.println("->Pikachu se encuentra con un
-         * Charmander y ataca"); pika.atacar(charm,
-         * Pikachu.Movimientos.IMPACTRUENO);
-         *
-         * System.out.println("->Charmander se molesta y responde ");
-         * charm.atacar(pika, Charmander.Movimientos.ATAQUE_RAPIDO);
-         *
-         * System.out.println("->Bullbasaur se enoja porque atacaron a su amigo
-         * Pikachu y..."); bullb.atacar(charm, Bullbasaur.Movimientos.LATIGO);
-        *
-         */
-        //pikachuSalvaje.atacar(gragon);
-        /**
-         * UNIDAD 2 //Separadores de batalla para no confundirse
-         * System.out.println("---------------------------------------------------");
-         * miPikachu.atacar(charmanderSalvaje);
-         * System.out.println("---------------------------------------------------");
-         * patoamarillo1.atacar(patoamarillo, "Arañazo");
-         * System.out.println("---------------------------------------------------");
-         * miPikachu.atacar(charmanderSalvaje, "ATACKTRUENO");
-         *
-         * System.out.println("----------------------------------");
-         * mew.atacar(pikachuSalvaje);
-         * System.out.println("----------------------------------");
-         * patoamarillo.atacar(mew);
-         * System.out.println("----------------------------------");
-         * gragon.atacar(patoamarillo);
-         * System.out.println("----------------------------------");
-        *
-         */
-    }
 
+        if (x.hayGanador()) {
+            System.out.println("¿Desea iniciar una nueva partida? (S/N)");
+
+            char respuesta = 'N';
+            try {
+                respuesta = (char) System.in.read();
+                System.in.read((new byte[System.in.available()]));
+            } catch (IOException ex) {
+                System.out.println("Error al leer la respuesta. Intenta de nuevo.");
+                ex.printStackTrace();
+            }
+
+            if (respuesta == 'S' || respuesta == 's') {
+                // Borra el archivo de la partida guardada
+                FileManager.borrarPartida();
+                //Pokemons 
+                Mew d = new Mew("Mew");
+                Jigglypuff e = new Jigglypuff("Jely");
+                Pikachu n = new Pikachu("PITP");
+                Bullbasaur l = new Bullbasaur("Frog");
+                
+                Entrenador nuevoEntrenador1 = new Entrenador("Erick");
+                nuevoEntrenador1.capturarPokemon(d);
+                nuevoEntrenador1.capturarPokemon(e);
+                
+                Entrenador nuevoEntrenador2 = new Entrenador("Dennise");
+                nuevoEntrenador2.capturarPokemon(l);
+                nuevoEntrenador2.capturarPokemon(n);
+                
+
+                Batalla nuevaBatalla = new Batalla(nuevoEntrenador1, nuevoEntrenador2);
+                nuevaBatalla.desarrollarBatalla();
+            }
+        }
+    }
 }

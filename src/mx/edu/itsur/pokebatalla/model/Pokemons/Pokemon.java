@@ -1,10 +1,12 @@
 package mx.edu.itsur.pokebatalla.model.Pokemons;
 
+import java.io.Serializable;
+
 /**
  *
  * @author Erick Omar Perez Gonzalez s22120250
  */
-public abstract class Pokemon {
+public abstract class Pokemon implements Serializable{
 
     //Atributos
     protected String tipo;

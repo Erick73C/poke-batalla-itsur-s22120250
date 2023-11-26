@@ -1,5 +1,6 @@
 package mx.edu.itsur.pokebatalla.model.Pokemons;
 
+import java.io.Serializable;
 import mx.edu.itsur.pokebatalla.model.moves.Destructor;
 import mx.edu.itsur.pokebatalla.model.moves.Movimiento;
 import mx.edu.itsur.pokebatalla.model.moves.Psicorrayo;
@@ -8,7 +9,7 @@ import mx.edu.itsur.pokebatalla.model.moves.Teletransporte;
 /**
  * @author Erick Omar Perez Gonzalez s22120250
  */
-public class Mew extends Pokemon {
+public class Mew extends Pokemon implements Serializable{
 
     public enum Movimientos {
         Destructor,
